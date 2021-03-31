@@ -1,0 +1,63 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: spring-boot-dex
+  name: spring-boot-dex
+spec:
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+    nodePort: 30170
+  selector:
+    app: spring-boot-dex
+  type: NodePort
+status:
+  loadBalancer: {}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: spring-boot-dex
+  name: spring-boot-dex
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-boot-dex
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: spring-boot-dex
+    spec:
+      containers:
+      - image: namrata933/spring-boot-dex
+        name: spring-boot-dex
+        resources: {}
+status: {}
+---
+
+#apiVersion: networking.k8s.io/v1beta1
+#kind: Ingress
+#metadata:
+#  name: spring-boot-dex
+#  annotations:
+#    nginx.ingress.kubernetes.io/rewrite-target: /
+#spec:
+#  rules:
+#  - host: spring-boot-dex.info
+#    http:
+#     paths:
+#     - path: /
+#       backend:
+#         serviceName: spring-boot-dex
+#         servicePort: 8080
