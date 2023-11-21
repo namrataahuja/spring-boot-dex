@@ -14,19 +14,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(MainController.class);
+   private static final Logger LOGGER = LoggerFactory.getLogger(MainController.class);
 	
-	private OAuth2AuthorizedClientService authorizedClientService;
+   private OAuth2AuthorizedClientService authorizedClientService;
 	
-	public MainController(OAuth2AuthorizedClientService authorizedClientService) {
-		this.authorizedClientService = authorizedClientService;
-	}
+   public MainController(OAuth2AuthorizedClientService authorizedClientService) {
+	this.authorizedClientService = authorizedClientService;
+   }
 
    @GetMapping("/")
    String home(Principal user) {
        return "Hello " + user.getName();
    }
-   
    @GetMapping("/authorizedClient")
    OAuth2AuthorizedClient authorizedClient(OAuth2AuthenticationToken authentication) {
 	   LOGGER.info("Authorized Client Registration Id: {}", authentication.getAuthorizedClientRegistrationId());
