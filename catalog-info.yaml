@@ -1,12 +1,12 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: backstage
-  description: backstage.io
+  name: spring-boot-dex
+  description: spring-boot-dex app
   annotations:
     backstage.io/managed-by-location: https://github.com/NemoAhuja/spring-boot-dex/edit/master/catalog-info.yaml
-    github.com/project-slug: 'spring-boot-dex'
+    github.com/project-slug: 'NemoAhuja/spring-boot-dex'
 spec:
   type: website
-  lifecycle: production
+  lifecycle: development
   owner: user:guest
