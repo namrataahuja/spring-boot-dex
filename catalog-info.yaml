@@ -4,6 +4,7 @@ metadata:
   name: backstage
   description: backstage.io
   annotations:
+    backstage.io/managed-by-location: https://github.com/NemoAhuja/spring-boot-dex/edit/master/catalog-info.yaml
     github.com/project-slug: 'spring-boot-dex'
 spec:
   type: website
