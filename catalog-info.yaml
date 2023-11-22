@@ -10,6 +10,7 @@ metadata:
     #backstage.io/managed-by-location: https://github.com/NemoAhuja/spring-boot-dex/edit/master/catalog-info.yaml
     github.com/project-slug: 'NemoAhuja/spring-boot-dex'
 spec:
-  type: website
-  lifecycle: development
+  type: service
+  lifecycle: production
+  system: TheaterBooking
   owner: user:guest
