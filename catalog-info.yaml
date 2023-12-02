@@ -12,5 +12,5 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  system: TheaterBooking
+  system: theaterbooking
   owner: user:guest
