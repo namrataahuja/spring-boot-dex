@@ -74,3 +74,5 @@ Credentials to authenticate in Dex: admin@example.com / password
 Created by https://www.arima.eu
 
 ![ARIMA Software Design](https://arima.eu/arima-claim.png)
+
+#With reviewer
