@@ -2,7 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: spring-boot-dex
-  description: spring-boot-dex app
+  description: spring-boot-dex
   appid: spring-boot-dex
   tags:
     - java
