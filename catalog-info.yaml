@@ -3,6 +3,7 @@ kind: Component
 metadata:
   name: spring-boot-dex
   description: spring-boot-dex app
+  appid: spring-boot-dex
   tags:
     - java
     - springboot
